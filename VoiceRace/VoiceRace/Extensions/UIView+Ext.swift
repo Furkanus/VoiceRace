@@ -11,6 +11,7 @@ extension UIView {
     func makeGradient(isVertical : Bool , colorArray : [UIColor]) {
         layer.sublayers?.filter({ $0 is CAGradientLayer }).forEach({ $0.removeFromSuperlayer() })
         
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = colorArray.map({ $0.cgColor })
         
